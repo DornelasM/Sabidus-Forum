@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: mentoria-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node src/app.js
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://pedroaosorio:giWfNfj5065iCUSS@clustersabidus.wphfx.mongodb.net/?retryWrites=true&w=majority&appName=Clustersabidus

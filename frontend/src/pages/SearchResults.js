@@ -298,11 +298,12 @@ const SearchResults = () => {
     setError(null);
     
     try {
-      const response = await axios.get(`http://localhost:5000/usuarios/posts/listar`, {
+      const response = await axios.get(`https://sabidus-backend.onrender.com/usuarios/posts/listar`, {
         headers: {
           'Authorization': `Bearer ${user?.token}`
         }
-      });
+    });
+    
 
       const filteredResults = response.data.filter(post =>
         post.titulo.toLowerCase().includes(query.toLowerCase()) ||
@@ -375,11 +376,12 @@ const SearchResults = () => {
 
     if (window.confirm('Tem certeza que deseja excluir este post?')) {
       try {
-        await axios.delete(`http://localhost:5000/usuarios/posts/${postId}`, {
+        await axios.delete(`https://sabidus-backend.onrender.com/usuarios/posts/${postId}`, {
           headers: {
             'Authorization': `Bearer ${user.token}`
           }
-        });
+      });
+      
 
         setResults(prevPosts => prevPosts.filter(post => post._id !== postId));
       } catch (error) {
