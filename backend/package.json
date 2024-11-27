@@ -4,8 +4,12 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "start": "node src/app.js"
+>>>>>>> 497238299a2aa825c42994e999a005dbe9d5b547
   },
   "keywords": [],
   "author": "",
@@ -16,6 +20,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "jsonwebtoken": "^8.x.x",
+    "mentoria_backend": "file:",
     "moment-timezone": "^0.5.46",
     "mongoose": "^8.7.1"
   },
